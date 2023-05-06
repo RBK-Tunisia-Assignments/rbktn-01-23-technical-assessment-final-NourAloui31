@@ -1,12 +1,13 @@
 import React from "react";
 import "../App.css"
 import "../index.scss";
+import RecepieCard from "./RecepieCard"
 
 const Onerecepie = ({ one,delRecepie }) => {
   return (
     <div>
       <button className="delete" onClick={()=>{delRecepie(one.recepie_Id)}}>delete</button>
-        <button className="update">update </button>
+        <button className="update" onClick={()=><RecepieCard one={one}/>}>update </button>
 
         <>
           <div className="header">

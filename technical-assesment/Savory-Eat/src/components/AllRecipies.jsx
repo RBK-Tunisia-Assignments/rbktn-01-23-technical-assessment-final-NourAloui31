@@ -12,7 +12,7 @@ const AllRecepies = () => {
   useEffect(()=>fetchData(),[])
 
   function fetchData(){
-    axios.get("http://localhost:4000/api/menuItems/getAll")
+    axios.get("http://localhost:4000/api/recepies/getAll")
     .then(reslt=>{
       console.log(reslt.data)
       setData(reslt.data)
@@ -20,7 +20,7 @@ const AllRecepies = () => {
   }
   
   function delRecepie(id){
-    axios.delete(`http://localhost:4000/api/menuItems/delete/${id}`)
+    axios.delete(`http://localhost:4000/api/recepies/${id}`)
     .then(reslt=>{
       console.log(reslt.data)
       window.location.reload()

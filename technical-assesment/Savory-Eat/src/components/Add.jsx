@@ -14,7 +14,7 @@ const Add = () => {
 
 
   function addData(body){
-    axios.post("http://localhost:4000/api/menuItems/add",body)
+    axios.post("http://localhost:4000/api/recepies/",body)
     .then (rslt=>{console.log(rslt)})
   }
 

@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-app.use("/api/menuItems",router)
+app.use("/api/recepies",router)
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
