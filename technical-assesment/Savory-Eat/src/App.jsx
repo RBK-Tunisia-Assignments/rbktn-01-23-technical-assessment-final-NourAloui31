@@ -12,9 +12,6 @@ const [view,setView]=useState('Home')
     setView(view);
   };
 
-
-
-
   return (
     <div className="App">
       <nav className="nav">

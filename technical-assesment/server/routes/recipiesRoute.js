@@ -3,7 +3,7 @@ const router = express.Router();
 
 const controller=require('../controller/recipiesController')
 
-const recepiesRouter =router.get("/",controller.getrecepie);
+const recepiesRouter =router.get("/getAll",controller.getrecepie);
 
 
 module.exports = recepiesRouter;
