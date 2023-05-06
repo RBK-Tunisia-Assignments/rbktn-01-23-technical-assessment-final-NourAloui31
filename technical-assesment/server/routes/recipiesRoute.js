@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/",);
+const controller=require('../controller/recipiesController')
+
+const recepiesRouter =router.get("/",controller.getrecepie);
 
 
-module.exports = router;
+module.exports = recepiesRouter;
