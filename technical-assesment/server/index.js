@@ -1,5 +1,5 @@
 const express = require("express");
-const recepiesRouter = require("./routes/recipiesRoute");
+const router= require("./routes/recipiesRoute");
 const app = express();
 const PORT = 4000;
 const cors=require("cors")
@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-app.use("/api/menuItems",recepiesRouter)
+app.use("/api/menuItems",router)
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);

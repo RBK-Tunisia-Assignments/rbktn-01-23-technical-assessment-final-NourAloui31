@@ -3,6 +3,7 @@ import React ,{useState}from "react";
 import "./App.css";
 import Home from "./components/Home.jsx";
 import AllRecepies from "./components/AllRecipies.jsx"
+import AddRecepie from "./components/Add"
 
 function App() {
 
@@ -45,6 +46,7 @@ const [view,setView]=useState('Home')
       </nav>
       {view === "Home" && <Home changeView={changeView}/>}
       {view === "Allrecepies" && <AllRecepies />}
+      {view === "Addrecepie" && <AddRecepie />}
      
       <div></div>
     </div>
