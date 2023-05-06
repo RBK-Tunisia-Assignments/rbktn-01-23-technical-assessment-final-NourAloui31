@@ -15,7 +15,16 @@ const addRecepie=(req,res)=>{
   })
 }
 
+const deleteRecepie=(req,res)=>{
+  const id=req.params.id
+  recepies.deleteR(id,function(err,rslt){
+    if (err) res.status(500).send(err)
+    else res.json(rslt)
+  })
+}
+
 module.exports = {
   getRecepie,
-  addRecepie
+  addRecepie,
+  deleteRecepie,
 };

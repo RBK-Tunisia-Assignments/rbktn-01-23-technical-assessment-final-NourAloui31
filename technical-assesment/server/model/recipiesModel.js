@@ -25,4 +25,11 @@ const add=(newRecepie,callback)=>{
     })
 }
 
-module.exports = { getAll , add};
+const deleteR=(id,callback)=>{
+    const sql=`DELETE FROM RECEPIE WHERE recepie_Id=${id}`
+    connection.query(sql,function(err,rslt){
+        callback(err,rslt)
+    })
+}
+
+module.exports = { getAll , add, deleteR};
